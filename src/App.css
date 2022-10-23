@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-body {
+body, 
+input {
   font-family: 'Courier New', Courier, monospace;
 
   display: flex;
