@@ -1,0 +1,11 @@
+.header-container {
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+h1 {
+  border-bottom: 1px solid black;
+}
