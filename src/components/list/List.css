@@ -1,7 +1,30 @@
+.add-todo {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.add-todo input,
+p {
+  font-size: 1rem;
+}
+
+.add-todo button {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
 .add-todo input {
   border: none;
   padding: 0.5rem;
-  font-size: 1rem;
   background-color: lightyellow;
 }
 
@@ -9,13 +32,23 @@
   outline: none;
 }
 
-.add-todo {
+form {
+  display: flex;
+
   border-bottom: 3px dotted black;
   width: 90%;
+}
 
-  margin-top: 2rem;
-  margin-left: 1.5rem;
-
+.list-item {
   display: flex;
-  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0rem;
+
+  border-bottom: 3px dotted black;
+  width: 90%;
+}
+
+.list-item input {
+  margin-right: 0.5rem;
+  padding: 0.8rem;
 }
