@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './List.css';
 import { AiOutlinePlus } from "react-icons/ai";
+import { IoTrashOutline } from "react-icons/io5";
 
 const List = () => {
 
@@ -30,8 +31,19 @@ const List = () => {
 
           return (
             <div className='list-item' key={id}>
-              <input type="checkbox" />
-              <p>{name}</p>
+              <div className='left'>
+                <input type="checkbox" />
+                <p>{name}</p>
+              </div>
+
+              <div className='right'>
+                <button>
+                  edit
+                </button>
+                <button>
+                  <IoTrashOutline className='trash-icon' />
+                </button>
+              </div>
             </div>
           )
         })

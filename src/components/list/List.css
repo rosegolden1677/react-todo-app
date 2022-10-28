@@ -6,11 +6,16 @@
 }
 
 .add-todo input,
+button,
 p {
   font-size: 1rem;
 
   margin: 0;
   padding: 0;
+}
+
+p {
+  max-width: 20rem;
 }
 
 .add-todo button,
@@ -48,11 +53,31 @@ form {
 
 .list-item {
   display: flex;
+  justify-content: space-between;
+
   margin-top: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 0rem;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
 }
 
 .list-item input {
   margin-right: 0.5rem;
   padding: 0.8rem;
+}
+
+.trash-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+
+  margin-left: 0.5rem;
+}
+
+.trash-icon:hover,
+.right button:hover {
+  opacity: 0.5;
 }
