@@ -9,17 +9,18 @@
 body, 
 input {
   font-family: 'Courier New', Courier, monospace;
-
-  display: flex;
-  justify-content: center;
+  padding-bottom: 3rem;
 }
 
 .todo-container {
   background-color: lightyellow;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.54);
 
-  width: 30vw;
-  height: 80vh;
+  max-width: 32rem;
+  min-height: 42rem;
+
+  margin: 0 auto;
 
   margin-top: 5rem;
+  padding-bottom: 3rem;
 }
