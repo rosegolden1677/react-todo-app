@@ -8,11 +8,18 @@ const List = () => {
   const [name, setName] = useState('');
   const [list, setList] = useState([]);
 
+  // submit function
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newList = [...list,{id: new Date().getTime.toString, name: name}];
-    setList(newList)
+
+    const newItem = {id: Date.now(), name: name};
+    setList([...list, newItem])
     setName('');
+  }
+
+  // remove item from list
+  const removeItem = (id) => {
+    setList(list.filter((item) => item.id !== id))
   }
 
   return (
@@ -21,7 +28,7 @@ const List = () => {
         <button type='submit'>
           <AiOutlinePlus className='plus-icon' />
         </button>
-        <input type="text" placeholder='add to-do' value={name} onChange={(e) =>setName(e.target.value)} />
+        <input type="text" placeholder='add to-do' value={name} onChange={(e) => setName(e.target.value)} />
       </form>
 
       {
@@ -40,7 +47,7 @@ const List = () => {
                 <button>
                   edit
                 </button>
-                <button>
+                <button onClick={() => removeItem(id)}>
                   <IoTrashOutline className='trash-icon' />
                 </button>
               </div>
