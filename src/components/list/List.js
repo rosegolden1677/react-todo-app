@@ -44,9 +44,6 @@ const List = () => {
               </div>
 
               <div className='right'>
-                <button>
-                  edit
-                </button>
                 <button onClick={() => removeItem(id)}>
                   <IoTrashOutline className='trash-icon' />
                 </button>
