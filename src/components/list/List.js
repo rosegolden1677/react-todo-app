@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './List.css';
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoTrashOutline } from "react-icons/io5";
 
+// get local storage
+const getLocalStorage = () => {
+  let list = localStorage.getItem('list');
+
+  if(list) {
+    return JSON.parse(localStorage.getItem('list'));
+  }
+  else {
+    return [];
+  }
+}
+
 const List = () => {
 
   const [name, setName] = useState('');
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getLocalStorage());
 
   // submit function
   const handleSubmit = (e) => {
@@ -21,6 +33,11 @@ const List = () => {
   const removeItem = (id) => {
     setList(list.filter((item) => item.id !== id))
   }
+
+  // call local storage everytime list changes
+  useEffect(() => {
+     localStorage.setItem('list', JSON.stringify(list));
+  })
 
   return (
     <div className='add-todo'>
