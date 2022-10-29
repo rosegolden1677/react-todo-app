@@ -17,6 +17,7 @@ const getLocalStorage = () => {
 
 const List = () => {
 
+  // initialize useState
   const [name, setName] = useState('');
   const [list, setList] = useState(getLocalStorage());
 
